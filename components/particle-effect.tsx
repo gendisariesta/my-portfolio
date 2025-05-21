@@ -27,7 +27,7 @@ export default function ParticleEffect() {
       animateParticle(particle);
     }
 
-    function resetParticle(particle) {
+    function resetParticle(particle:HTMLDivElement) {
       const posX = Math.random() * 100;
       const posY = Math.random() * 100;
       particle.style.left = `${posX}%`;
@@ -36,7 +36,7 @@ export default function ParticleEffect() {
       return { x: posX, y: posY };
     }
 
-    function animateParticle(particle) {
+    function animateParticle(particle:HTMLDivElement) {
       const pos = resetParticle(particle);
       const duration = Math.random() * 10 + 10;
       const delay = Math.random() * 5;
