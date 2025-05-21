@@ -23,7 +23,7 @@ export default function ParticleEffect() {
       particle.style.height = `${size}px`;
 
       resetParticle(particle);
-      particlesContainer.appendChild(particle);
+      particlesContainer!.appendChild(particle); 
       animateParticle(particle);
     }
 
