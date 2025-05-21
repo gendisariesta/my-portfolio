@@ -7,15 +7,15 @@ const projects = [
     {
         description: "This is project is for write your quran's journal.You can read quran too in this website. The API i use in from https://equran.id/apidev/v2",
         tool: ['PHP', 'Laravel', 'Mysql', 'Bootstrap'],
-        image1: "./project1.png",
-        image2: "./project2.png",
+        image1: "./project1.PNG",
+        image2: "./project2.PNG",
         link: "https://stresspredict.goolaya.my.id/",
     },
     {
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. In perferendis quae repellat facere optio officiis porro! Necessitatibus, magnam ea similique qui quis rem quod temporibus eum, veritatis voluptatem saepe illum.",
         tool: ['PHP', 'Laravel', 'Mysql', 'Bootstrap'],
-        image1: "./project3.png",
-        image2: "./project4.png",
+        image1: "./project3.PNG",
+        image2: "./project4.PNG",
         link: "https://stresspredict.goolaya.my.id/",
     }
 ]
