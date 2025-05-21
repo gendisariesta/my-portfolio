@@ -79,7 +79,7 @@ export default function ParticleEffect() {
         }, 2000);
       }, 10);
 
-      const spheres = document.querySelectorAll('.gradient-sphere');
+      const spheres = document.querySelectorAll('.gradient-sphere') as NodeListOf<HTMLElement>;
       const moveX = (e.clientX / window.innerWidth - 0.5) * 5;
       const moveY = (e.clientY / window.innerHeight - 0.5) * 5;
       spheres.forEach(sphere => {
