@@ -10,17 +10,23 @@ export default function Contact() {
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry, i) => {
+                    const el = entry.target as HTMLElement;
+
                     if (entry.isIntersecting) {
-                        const el = entry.target;
-                        el.dataset.timeoutId && clearTimeout(el.dataset.timeoutId);
+                        if (el.dataset.timeoutId) {
+                            clearTimeout(parseInt(el.dataset.timeoutId));
+                        }
+
                         const timeoutId = setTimeout(() => {
                             el.classList.add("card-animation-in");
                         }, i * 300);
-                        el.dataset.timeoutId = timeoutId;
-                        entry.target.classList.add("animate-in");
+
+                        el.dataset.timeoutId = timeoutId.toString();
+
+                        el.classList.add("animate-in");
                     } else {
-                        entry.target.classList.remove("card-animation-in");
-                        entry.target.classList.remove("animate-in");
+                        el.classList.remove("card-animation-in");
+                        el.classList.remove("animate-in");
                     }
                 });
             },
