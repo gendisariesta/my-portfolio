@@ -1,7 +1,10 @@
 "use client"
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "react-feather";
-export default function CarouselVertical({ data }) {
+type CarouselProps = {
+  data: any[];
+};
+export default function CarouselVertical({ data }:CarouselProps) {
     const [curr, setcurr] = useState(0)
     const next = () => setcurr(curr => (curr === data.length - 1 ? 0 : curr + 1));
     const prev = () => setcurr(curr => curr == 0 ? data.length - 1 : curr - 1)
