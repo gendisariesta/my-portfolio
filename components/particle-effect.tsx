@@ -55,7 +55,7 @@ export default function ParticleEffect() {
       }, delay * 1000);
     }
 
-    const mouseHandler = (e) => {
+    const mouseHandler = (e:MouseEvent) => {
       const mouseX = (e.clientX / window.innerWidth) * 100;
       const mouseY = (e.clientY / window.innerHeight) * 100;
       const particle = document.createElement('div');
